@@ -1,0 +1,44 @@
+A file is sourced in two ways. One is either writting as source <fileName> or other is writting as . ./<filename> in the command line. When a file is sourced, the code lines are executed as if they were printed on the command line.
+
+bash <fileName>  -Troubleshooting a shell script
+
+Shell Parameters
+
+Parameters	Function
+$1-$9	Represent positional parameters for arguments one to nine
+${10}-${n}	Represent positional parameters for arguments after nine
+$0	Represent name of the script
+$∗	Represent all the arguments as a single string
+$@	Same as $∗, but differ when enclosed in (")
+$#	Represent total number of arguments
+$$	PID of the script
+$?	Represent last return code
+
+
+if [ $color == Red ]  
+elif [ $color == Blue ]  
+
+To create a function
+
+Syntax:
+
+ function functionName () {  
+        Commands to be executed  
+}  
+You will call your function with their function name.
+
+Example:
+
+function Welcome () {  
+  
+}  
+
+
+Shell Scripting eval command
+The eval command is a built-in command. It takes a string as its argument and evaluate it, then run the command stored in the argument. It allows using the value of a variable as a variable.
+Example 1:
+eval echo \${$User}  
+
+Shell Scripting let command
+The let command is an arithmetic operator. It is almost same as (( )). Only difference is that, let is an arithmetic command while (( )) is a compound command.
+It is a built-in command which instructs shell to perform an evaluation of arithmetic expressions. No spaces should be used around the arithmetic operant with let command.
